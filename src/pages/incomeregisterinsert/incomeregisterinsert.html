@@ -1,0 +1,73 @@
+<!--
+  Generated template for the IncomeregisterinsertPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="titlebar">
+    <ion-title>
+      <h6 class="title">
+        <span *ngIf="iD">အခြားကားဝင်ငွေမှတ်တမ်းပြင်ရန်</span>
+        <span *ngIf="!iD">အခြားကားဝင်ငွေမှတ်တမ်းတင်ရန်</span>
+      </h6>
+    </ion-title>
+    <ion-buttons class="tit" end>
+      <button ion-button icon-only clear style="color: green;">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="body">
+  <ion-card>
+    <ion-item>
+      <ion-label class="label" floating color="titlebar" (tap)="trackTap()">ခရီးစဉ်</ion-label>
+      <ion-input list="ss" type="text" (tap)="trackTap()" (click)="trackTap()" [(ngModel)]="selectedTrack" class="btmcolor" id="font"></ion-input>
+    </ion-item>
+    <datalist id="ss">
+      <option *ngFor="let item of Tracks" value="{{item.value}}" id="font">{{item.value}}</option>
+    </datalist>
+    <ion-item>
+      <ion-label class="label" floating color="titlebar" (tap)="cartypeTap()">ကားအမျိုးအစား</ion-label>
+      <ion-input list="car" type="text"(tap)="cartypeTap()" (click)="cartypeTap()" [(ngModel)]="selectedCartype" class="btmcolor" id="font"></ion-input>
+    </ion-item>
+    <datalist id="car">
+      <option *ngFor="let item of Cartypes" value="{{item.value}}" id="font">{{item.value}}</option>
+    </datalist>
+    <ion-item>
+      <ion-label class="label" floating color="titlebar" (tap)="Carnumber()">ကားနံပါတ်</ion-label>
+      <ion-input list="carnum" type="text" [(ngModel)]="carnumber" class="btmcolor" id="font" (tap)="Carnumber()"></ion-input>
+    </ion-item>
+    <datalist id="carnum">
+      <option *ngFor="let item of Carnumbers" value="{{item.value}}" id="font">{{item.value}}</option>
+    </datalist>
+    <ion-item>
+      <ion-label class="label" floating color="titlebar">Owner ကျန်ငွေ</ion-label>
+      <ion-input type="number" [(ngModel)]="income" class="btmcolor" id="font"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="label" floating color="titlebar">ခရီးစဉ်အမျိုးအစား</ion-label>
+      <ion-input list="aa" type="text" [(ngModel)]="selectedTracktype" class="btmcolor" id="font"></ion-input>
+    </ion-item>
+    <datalist id="aa">
+      <option *ngFor="let item of Tracktypes" value="{{item.value}}" id="font">{{item.value}}</option>
+    </datalist>
+    <ion-item>
+      <ion-label color="titlebar" floating (tap)="dateTap()">ရက်စွဲ</ion-label>
+      <ion-input [(ngModel)]="dateOfEvent" (tap)="dateTap()" (click)="dateTap()" class="btmcolor" id="font"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="label" color="titlebar" floating>မှတ်ချက်</ion-label>
+      <ion-textarea rows="6" id="font" type="text" class="btmcolor" [(ngModel)]="remark"  id="font"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <button ion-button block color="titlebar" class="btn" style="height: 35px; font-size: 15px;">
+        <span *ngIf="iD" (click)="edit()" class="span">ပြင်မည်</span>
+        <span *ngIf="!iD" (click)="save()" class="span">မှတ်တမ်းတင်မည်</span>
+      </button>
+    </ion-item>
+  </ion-card>
+</ion-content>

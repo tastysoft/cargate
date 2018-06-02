@@ -1,0 +1,66 @@
+<!--
+  Generated template for the GeneralusePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="titlebar">
+      <ion-title>
+        <h6 class="title">
+          အထွေထွေသုံးစာရင်း
+        </h6>
+      </ion-title>
+      <ion-buttons  class="tit" end>
+          <button ion-button icon-only clear style="color: white;" (click)="insertRent()">
+              <ion-icon name="add"></ion-icon>
+            </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content class="body">
+    <ion-searchbar  (tap)="searchTap()" [animated]="true" (ionInput)="getItems()" placeholder="ရက္စြဲ"[(ngModel)]="searchData" id="font" ></ion-searchbar>
+    <ion-card>
+        <ion-list>
+          <ion-item>
+            <ion-grid>
+              <ion-row>
+                <ion-col  col-4 text-wrap>
+                  <h2 style="color: green;">ကုန်ကျငွေ</h2>
+                </ion-col>
+                <ion-col col-4 text-wrap>
+                  <h2 style="color: green;">ရက်စွဲ</h2>
+                </ion-col>
+                <ion-col col-4 text-wrap>
+                  <h2 style="color: green;">မှတ်ချက်</h2>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+          <ion-item-sliding *ngFor="let item of Electricity" class="list">
+            <ion-item>
+              <ion-grid>
+                <ion-row id="font">
+                  <ion-col col-4 text-wrap> {{item.electricity}}</ion-col>
+                  <ion-col col-4 text-wrap> {{item.date}}</ion-col>
+                  <ion-col col-4 text-wrap> {{item.remark}}</ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+    
+            <ion-item-options>
+              <button ion-button color="titlebar" icon-left class="ListBtn" (click)="edit(item)" style="width: 60px;">
+                <ion-icon name="ios-create"></ion-icon>
+                ပြင်မည်
+              </button>
+              <button ion-button color="delete" icon-left class="ListBtn" (click)="delete(item)">
+                <ion-icon name="ios-trash"></ion-icon>
+                ဖျက်မည်
+              </button>
+            </ion-item-options>
+          </ion-item-sliding>
+        </ion-list>
+      </ion-card>
+</ion-content>

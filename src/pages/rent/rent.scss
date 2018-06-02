@@ -1,0 +1,27 @@
+page-rent {
+    .body{
+        background-color: rgb(228, 226, 226);
+    }
+    .title{
+        margin-top: 3px;
+        text-align: center;
+    }
+    .tit{
+        margin-left: 5%;
+    }
+    .rows{
+        border-top: 1px solid rgb(185, 184, 184);
+     }
+     .cla{
+         border-right: 1px solid rgb(185, 184, 184);
+     }
+     #cla{
+         border-left: 1px solid rgb(185, 184, 184);
+     }
+     #font{
+         font-family: 'ZawgyiOne','Myanmar3';
+     }
+     .btmcolor{
+         border-bottom: 2px solid #dedede;
+     }
+}

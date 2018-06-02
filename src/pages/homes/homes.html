@@ -1,0 +1,142 @@
+<!--
+  Generated template for the HomesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="titlebar">
+    <button ion-button menuToggle class="header">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <h6 class="title">
+        ပင်မစာမျက်နှာ
+      </h6>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="body">
+
+  <ion-grid class="grid">
+    <ion-row>
+      <img src="assets/imgs/heingroup.jpg">
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="grids">
+    <ion-row class="rows">
+      <ion-col col-6>
+        <button ion-button block class="btn" color="titlebar" (click)="income()">
+            <ion-grid class="grid1">
+              <ion-row class="ro">
+                <ion-col class="classes">
+                  <br>
+                  <img src="assets/imgs/income.png" class="image">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="classe">
+                  ဂိတ်ဝင်ငွေများ
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </button>
+      </ion-col>
+      <ion-col col-6>
+      
+        <button ion-button block class="btn" color="titlebar" (click)="outgo()">
+            <ion-grid class="grid1">
+              <ion-row class="ro">
+                <ion-col class="classes">
+                  <br>
+                  <img src="assets/imgs/outgo1.png" class="image">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="classe">
+                  ဂိတ်ထွက်ငွေများ
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="rows">
+      <ion-col col-6>
+          <button ion-button block class="btn" color="titlebar" (click)="inandout()">
+              <ion-grid class="grid1">
+                <ion-row class="ro">
+                  <ion-col class="classes">
+                    <br>
+                    <img src="assets/imgs/inandout.png" class="image">
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col class="classe">
+                    ကိုယ်ပိုင်ကားဝင်ငွေ/ထွက်ငွေ
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </button>
+      </ion-col>
+      <ion-col col-6>
+          <button ion-button block class="btn" color="titlebar" (click)="owncarupdate()">
+              <ion-grid class="grid1">
+                <ion-row class="ro">
+                  <ion-col class="classes">
+                    <br>
+                    <img src="assets/imgs/ownupdate1.png" class="image">
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col class="classe">
+                    ကိုယ်ပိုင်ကားပြင်မှတ်တမ်း
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="rows">
+      <ion-col col-6>
+         
+            <button ion-button block class="btn" color="titlebar" (click)="incomerecord()">
+                <ion-grid class="grid1">
+                  <ion-row class="ro">
+                    <ion-col class="classes">
+                      <br>
+                      <img src="assets/imgs/incomerecord (2).png" class="image">
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col class="classe">
+                      အခြားကားဝင်ငွေမှတ်တမ်း
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button block class="btn" color="titlebar" (click)="aboutus()">
+            <ion-grid class="grid1">
+                <ion-row class="ro">
+                  <ion-col class="classes">
+                    <br>
+                    <img src="assets/imgs/about-us.png" class="image">
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col class="classe">
+                      CONTACT US
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

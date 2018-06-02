@@ -1,0 +1,110 @@
+<!--
+  Generated template for the InandoutcomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="titlebar">
+    <ion-title>
+      <h6 class="title">
+        ကိုယ်ပိုင်ကားဝင်ငွေ/ထွက်ငွေ
+      </h6>
+    </ion-title>
+    <ion-buttons class="tit" end>
+      <button ion-button icon-only clear style="color: white;" (click)="insertPhonebill()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="body">
+  <ion-card >
+    <ion-item>
+      <ion-label floating color="titlebar" (tap)="searchType()">ရှာမည့်အမျိုးအစားအမည်</ion-label>
+      <ion-input (click)="searchType()" (tap)="searchType()" list="searchtype" id="font" type="text" [(ngModel)]="selectedSearchtype"
+        class="btmcolor"></ion-input>
+      <select>
+        <option id="font" *ngFor="let item of SearchTypes" value="{{item.value}}">{{item.value}}</option>
+      </select>
+    </ion-item>
+    <datalist id="searchtype">
+      <option id="font" *ngFor="let item of SearchTypes" value="{{item.value}}">{{item.value}}</option>
+    </datalist>
+    <ion-searchbar (tap)="searchTap()" [animated]="true" (ionInput)="getItems()" [(ngModel)]="searchData" id="font"></ion-searchbar>
+  </ion-card>
+  <ion-card *ngFor="let item of Inandout">
+    <ion-row  class="rows">
+      <ion-col  id="cla" class="coloranddesign" > ခရီးစဉ်အမျိုးအစား</ion-col>
+      <ion-col id="cla" class="cla" > {{item.tracktype}} </ion-col>
+    </ion-row>
+    <ion-row  class="rows">
+      <ion-col  id="cla" class="coloranddesign"  > ကားအမျိုးအစား</ion-col>
+      <ion-col id="cla" class="cla"> {{item.cartype}} </ion-col>
+    </ion-row >
+    <ion-row  class="rows">
+      <ion-col  id="cla" class="coloranddesign"  > ကားနံပါတ်</ion-col>
+      <ion-col id="cla" class="cla"> {{item.carnumber}} </ion-col>
+    </ion-row>
+    <ion-row  class="rows">
+      <ion-col  id="cla"  class="coloranddesign" > ဆီကုန်ကျငွေ</ion-col>
+      <ion-col id="cla" class="cla"> {{item.oil}} </ion-col>
+    </ion-row>
+    <ion-row  class="rows">
+      <ion-col  id="cla"  class="coloranddesign" > လမ်းကြေး</ion-col>
+      <ion-col id="cla" class="cla"> {{item.road}} </ion-col>
+    </ion-row>
+    <ion-row  class="rows">
+      <ion-col  id="cla" class="coloranddesign"  > ခေါက်ကြေး</ion-col>
+      <ion-col id="cla" class="cla"> {{item.times}} </ion-col>
+    </ion-row>
+    <ion-row  class="rows">
+      <ion-col  id="cla" class="coloranddesign"  > ဂိတ်ကြေး</ion-col>
+      <ion-col id="cla" class="cla"> {{item.gate}} </ion-col>
+    </ion-row>
+    <ion-row  class="rows">
+      <ion-col  id="cla"  class="coloranddesign" > စားစရိတ်</ion-col>
+      <ion-col id="cla" class="cla"> {{item.feed}} </ion-col>
+    </ion-row>
+    <ion-row  class="rows">
+      <ion-col  id="cla"  class="coloranddesign" > ကားရေဆေး</ion-col>
+      <ion-col  id="cla" class="cla"> {{item.carwash}} </ion-col>
+    </ion-row>
+    <ion-row  class="rows">
+      <ion-col  id="cla"  class="coloranddesign" > လေချိန်/လေစစ်/လေမှုတ်</ion-col>
+      <ion-col id="cla" class="cla"> {{item.air}} </ion-col>
+    </ion-row>
+    <ion-row  class="rows">
+      <ion-col  id="cla"  class="coloranddesign" > ဝင်ငွေ</ion-col>
+      <ion-col id="cla" class="cla"> {{item.income}} </ion-col>
+    </ion-row>
+    <ion-row  class="rows">
+      <ion-col  id="cla"  class="coloranddesign" > ကျန်ငွေ</ion-col>
+      <ion-col id="cla" class="cla"> {{item.remain}} </ion-col>
+    </ion-row>
+    <ion-row  class="rows">
+      <ion-col  id="cla"  class="coloranddesign" > ရက်စွဲ</ion-col>
+      <ion-col id="cla" class="cla"> {{item.date}} </ion-col>
+    </ion-row>
+    <ion-row  class="rows">
+      <ion-col id="cla"  class="coloranddesign" > မှတ်ချက်</ion-col>
+      <ion-col id="cla" class="cla"> {{item.remark}} </ion-col>
+    </ion-row>
+    <ion-row class="rows" id="rows">
+      <ion-col id="cla">
+        <button ion-button clear block color="titlebar" ion-left (click)="edit(item)">
+          <ion-icon name="ios-create" style="margin-right: 5px;"></ion-icon>
+          ပြင်မည်
+        </button>
+      </ion-col>
+      <ion-col style="border-right: 1px solid rgb(185, 184, 184);">
+        <button ion-button clear block color="danger" ion-left (click)="delete(item)">
+          <ion-icon name="trash" style="margin-right: 5px;"></ion-icon>
+          ဖျက်မည်
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

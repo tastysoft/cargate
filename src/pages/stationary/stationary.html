@@ -1,0 +1,67 @@
+<!--
+  Generated template for the StationaryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="titlebar">
+      <ion-title>
+        <h6 class="title">
+          ဂိတ်အသုံးစာရင်း
+        </h6>
+      </ion-title>
+      <ion-buttons  class="tit" end>
+          <button ion-button icon-only clear style="color: white;" (click)="insertStationary()">
+              <ion-icon name="add"></ion-icon>
+            </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content>
+    <ion-card>
+        <ion-item>
+          <ion-label floating color="titlebar" (tap)="searchType()" >ရှာမည့်အမျိုးအစားအမည်</ion-label>
+          <ion-input (click)="searchType()" (tap)="searchType()" list="searchtype" id="font" type="text" [(ngModel)]="selectedSearchtype" class="btmcolor"></ion-input>
+        </ion-item>
+        <datalist id="searchtype">
+          <option id="font" *ngFor="let item of SearchTypes" value="{{item.value}}">{{item.value}}</option>
+        </datalist>
+        <ion-searchbar  (tap)="searchTap()" [animated]="true" (ionInput)="getItems()" [(ngModel)]="searchData" id="font" ></ion-searchbar>
+    
+      </ion-card>
+      <ion-card *ngFor="let item of Outcome">
+        <ion-row class="rows">
+          <ion-col col-6 id="cla" text-center class="cla" style="background-color: green; color: white;">ဂိတ်အမျိုးစား</ion-col>
+          <ion-col col-6 text-center class="cla" style="background-color: green; color: white;">ဂိတ်သုံးငွေ</ion-col>
+        </ion-row>
+        <ion-row class="rows">
+          <ion-col col-6 id="cla" class="cla" style="padding-right: 3px; font-family: ZawgyiOne;">{{item.gatetype}}</ion-col>
+          <ion-col col-6 class="cla" style="padding-right: 3px; font-family: ZawgyiOne;">{{item.stationary}}</ion-col>
+        </ion-row>
+        <ion-row class="rows">
+          <ion-col col-6 id="cla" class="cla" text-center style="background-color: green;color: white; ">ရက်စွဲ</ion-col>
+          <ion-col col-6 text-center class="cla" style="background-color: green;color: white; ">မှတ်ချက်</ion-col>
+        </ion-row>
+        <ion-row class="rows">
+          <ion-col col-6 id="cla" class="cla" style="padding-right: 3px;font-family: ZawgyiOne;">{{item.date}}</ion-col>
+          <ion-col col-6 class="cla" style="padding-right: 3px;font-family: ZawgyiOne;">{{item.remark}}</ion-col>
+        </ion-row>
+        <ion-row class="rows" id="rows">
+          <ion-col id="cla">
+            <button ion-button clear block color="titlebar" ion-left (click)="edit(item)">
+              <ion-icon name="ios-create" style="margin-right: 5px;"></ion-icon>
+              ပြင်မည်
+            </button>
+          </ion-col>
+          <ion-col class="cla">
+            <button ion-button clear block color="danger" ion-left (click)="delete(item)">
+              <ion-icon name="trash" style="margin-right: 5px;"></ion-icon>
+              ဖျက်မည်
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+</ion-content>

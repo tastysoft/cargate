@@ -1,0 +1,39 @@
+page-inandoutcome {
+    .rows{
+        border-top: 1px solid rgb(185, 184, 184);
+     }
+     .cla{
+         border-right: 1px solid rgb(185, 184, 184);
+         text-align: right;
+         background: rgba(0, 128, 0, 0.856);
+         padding-right: 5%;
+         padding-left: 0%;
+         color: white;
+         font-family: 'ZawgyiOne';
+     }
+     .coloranddesign{
+         text-align: center;
+         background: rgba(0, 128, 0, 0.856);
+         color: white;
+         
+     }
+     #cla{
+         border-left: 1px solid rgb(185, 184, 184);
+     }
+     .body{
+         background-color: rgb(228, 226, 226);
+     }
+     #font{
+         font-family: 'ZawgyiOne','Myanmar3';
+     }
+     .btmcolor{
+         border-bottom: 2px solid #dedede;
+     }
+     .title{
+         margin-top: 3px;
+         text-align: center;
+     }
+    .tit{
+        margin-left: 5%;
+    }
+}
